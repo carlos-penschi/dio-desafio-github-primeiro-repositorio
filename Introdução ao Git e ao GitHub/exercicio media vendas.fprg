@@ -4,34 +4,39 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="carlo"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-05 07:22:30 "/>
+        <attribute name="saved" value="2022-01-10 06:54:24 "/>
         <attribute name="created" value="Y2FybG87TEFQVE9QLUEyT1VNSTFEOzIwMjItMDEtMDU7IjA2OjU3OjQyICI7Mjc3NQ=="/>
-        <attribute name="edited" value="Y2FybG87TEFQVE9QLUEyT1VNSTFEOzIwMjItMDEtMDU7IjA3OjIyOjMwICI7MTsyODcz"/>
+        <attribute name="edited" value="Y2FybG87TEFQVE9QLUEyT1VNSTFEOzIwMjItMDEtMTA7IjA2OjU0OjI0ICI7MjsyODc3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="janeiro, fevereiro, marco, abril, media" type="Real" array="False" size=""/>
             <declare name="abono" type="Real" array="False" size=""/>
+            <declare name="abonoemreais" type="String" array="False" size=""/>
+            <output expression="&quot;insira suas vendas de janeiro:&quot;" newline="True"/>
             <input variable="janeiro"/>
+            <output expression="&quot;insira suas vendas de fevereiro:&quot;" newline="True"/>
             <input variable="fevereiro"/>
+            <output expression="&quot;insira suas vendas de mar&#231;o:&quot;" newline="True"/>
             <input variable="marco"/>
+            <output expression="&quot;insira suas vendas de abril:&quot;" newline="True"/>
             <input variable="abril"/>
             <assign variable="media" expression="(janeiro+fevereiro+marco+abril)/4"/>
             <if expression="media&gt;=5000">
                 <then>
                     <assign variable="abono" expression="media*.1"/>
+                    <assign variable="abonoemreais" expression="ToFixed(abono, 2)"/>
                     <output expression="&quot;Parab&#233;ns, abono de R$&quot;" newline="False"/>
-                    <output expression="abono" newline="False"/>
-                    <output expression="&quot;,00 (10%)&quot;" newline="True"/>
+                    <output expression="abonoemreais" newline="False"/>
                 </then>
                 <else>
                     <if expression="media&gt;=2000">
                         <then>
                             <assign variable="abono" expression="media*.03"/>
+                            <assign variable="abonoemreais" expression="ToFixed(abono, 2)"/>
                             <output expression="&quot;Precisa melhorar, abono de R$&quot;" newline="False"/>
-                            <output expression="abono" newline="False"/>
-                            <output expression="&quot;,00 (3%)&quot;" newline="True"/>
+                            <output expression="abonoemreais" newline="False"/>
                         </then>
                         <else>
                             <output expression="&quot;Voc&#234; est&#225; despedido!&quot;" newline="True"/>
