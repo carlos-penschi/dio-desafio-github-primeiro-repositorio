@@ -12,7 +12,9 @@ Repositório criado para o Desafio de Projeto
 
 
 Curso 1: Introdução à Lógica de Programação
+
 Exercício Média de Vendas - Flowgorithm
+
 Exercício Média de Vendas - Portugol
 
 
